@@ -1,13 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orden de trabajo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/ca2e0ad4f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-success text-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <a class="navbar-brand text-white px-5n " href="#">TECNOBOX</a>
+                <div class="row row-cols-auto navbar-nav align-self-end " style="--bs-gutter-x: 0 !important;">
+                    <div class="nav-item "><a class="nav-link text-light" href="productos_st"><i class="fas fa-tags"
+                                aria-hidden="true"></i> Productos ST </a></div>
+                    <div class="nav-item "><a class="nav-link text-light    " href="estadisticas_locales"><i
+                                class="fas fa-signal" aria-hidden="true"></i> Estadísticas Locales </a></div>
+                    <div class="nav-item "><a class="nav-link text-light    " href="stock_st"><i class="fas fa-barcode"
+                                aria-hidden="true"></i> Stock ST </a></div>
+                    <div class="nav-item "><a class="nav-link text-light    " href="servicio_tecnico"><i
+                                class="fas fa-wrench" aria-hidden="true"></i> Ordenes Servicio Técnico </a></div>
+                    <div class="nav-item active"><a class="nav-link text-light  " href="informe_servicios"><i
+                                class="fas fa-wrench" aria-hidden="true"></i> Control S.T. <span
+                                class="sr-only">(Actual)</span></a></div>
+                    <div class="nav-item"><a class="nav-link text-light " href="#"><i class="fas fa-user"
+                                aria-hidden="true"></i>
+                            diego</a></div>
+                    <div class="nav-item"><a class="nav-link text-light " href="login?logout"><i
+                                class="fas fa-sign-out-alt" aria-hidden="true"></i> Salir</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class=" container-xl bg-light mt-3 mb-3 border rounded ">
+        <!-- encabezado -->
+        <div class="container mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 ">
+                        <img class="img-fluid" src="img/logo_tecno_transp.png" alt="logo-tecnobox">
+                    </div>
+                    <div class="col-7">
+                        <h1 class="text-center text-uppercase ">orden servicio Tecnico</h1>
+                        <p class="text-center">Fecha ingreso: <input type="date"></p>
+                    </div>
+                    <div class="col-2 g-1">
+                        <h3 class="fs-2">N°orden:xxx</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- datos tienda -->
+            <div class="container-xl my-4">
+                <h4 class="text-center text-uppercase"><strong>Tienda:</strong> servicio tecnico</h4>
+            </div>
+            <!-- datos cliente-->
+
+            <div class="row g-2 justify-content-center">
+                <h2 class="text-center mt-3">Datos cliente</h2>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="nombre del cliente">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Numero de contacto</label>
+                        <input type="number" class="form-control" id="numero" placeholder="+569-6942 1809">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2 justify-content-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="rut" class="form-label">Rut / Pasaporte</label>
+                        <input type="number" class="form-control" id="rut" placeholder="Sin punto ni guion">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="correo" placeholder="hola@tecnoboxchile.cl">
+                    </div>
+                </div>
+            </div>
+            <!-- datos equipo-->
+            <div class="row g-2 justify-content-center">
+                <h2 class="text-center mt-3">Datos Equipo</h2>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" placeholder="marca del celular">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="modelo" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" placeholder="modelo del celular">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2 justify-content-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="imei" class="form-label">Imei o serie</label>
+                        <input type="text" class="form-control" id="imei" placeholder="ingrese codigo">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="color" class="form-label">Color</label>
+                        <input type="text" class="form-control" id="color">
+                    </div>
+                </div>
+            </div>
+            <!-- reparaciones -->
+            <div class="row g-2 justify-content-center mb-5">
+                <h2 class="text-center mt-3">Ingreso equipo</h2>
+                <div class="col-6 mb-3">
+                    <label for="estado-telefono" class="form-label">Condicion del Equipo </label>
+                    <textarea class="form-control" id="estado-telefono" rows="2"></textarea>
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="problema" class="form-label">Problemas </label>
+                    <textarea class="form-control" id="problema" rows="2"></textarea>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="container-fluid my-4">
+                        <h4 class="text-center text-uppercase"><strong>IMPORTANTE:</strong> politica de servicio tecnico
+                        </h4>
+                    </div>
+                    <div class="col-10">
+                        <p>1.- La empresa <strong class="text-uppercase">NO se hace responsable</strong> por la perdida
+                            de algun accesorio (tarjeta de memoria,
+                            chip, carcasa, etc).</p>
+                        <p>2.- Si un equipo a reparar se abre desde la pantalla, este <strong
+                                class="text-uppercase">corre el riesgo</strong> de sufrir algun
+                            tipo de daño interno o en la misma
+                            pantalla.</p>
+                        <p>3.- Al entrar a taller se <strong class="text-uppercase">pierde en su totalidad la
+                                garantia</strong> dada por el proveedor o
+                            fabricante.</p>
+                        <p>4.- Los equipos sulfatados <strong class="text-uppercase">no se pueden garantizar
+                            </strong>tal cual lo dice el SERNAC.</p>
+                        <p>5.- Las garantias son  <strong class="text-uppercase">solo por el trabajo realizado</strong> en caso de falla de fabrica que no
+                            involucre
+                            manipulacion del cliente o
+                            terceros y es de  <strong class="text-uppercase">30 dias</strong> calendario desde su retiro.</p>
+                        <p>6.- El generar un respaldo de informacion es de <strong class="text-uppercase">responsabilidad del cliente.</strong> Cualquier trabajo
+                            tecnico puede derivar en una
+                            perdida de informacion.</p>
+                        <p>7.- Lavados quimicos  <strong class="text-uppercase">no tienen ningun tipo de garantia</strong>, ya que esta no es una reparacion es
+                            un
+                            proceso de limpiesa del
+                            equipo preventivo.</p>
+                        <p>8.- El equipo debe ser retirado dentro de un  <strong class="text-uppercase">plazo maximo de 90 dias</strong> o sera considerado como
+                            pago por trabajo reaizado.</p>
+                        <p>9.- Al ingresar el  <strong class="text-uppercase">dispositivo apagado</strong>,  <strong class="text-uppercase">no se dara garantia</strong> en caso de que algun perifesrico
+                            falle luego de alguna reparacion
+                            (camaras, microfonos, altavoces).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
