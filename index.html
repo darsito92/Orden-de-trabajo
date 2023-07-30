@@ -14,14 +14,14 @@
 
 <body>
     <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-success text-white">
-        <div class="container-fluid">
+        <div class="container-fluid justify-content-center">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="collapse navbar-collapse " id="navbarNav">
-                <a class="navbar-brand text-white px-5n " href="#">TECNOBOX</a>
-                <div class="row row-cols-auto navbar-nav align-self-end " style="--bs-gutter-x: 0 !important;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand text-white px-5 " href="#">TECNOBOX</a>
+                <div class="row row-cols-auto navbar-nav ">
                     <div class="nav-item "><a class="nav-link text-light" href="productos_st"><i class="fas fa-tags"
                                 aria-hidden="true"></i> Productos ST </a></div>
                     <div class="nav-item "><a class="nav-link text-light    " href="estadisticas_locales"><i
@@ -42,7 +42,6 @@
             </div>
         </div>
     </nav>
-
     <div class=" container-xl bg-light mt-3 mb-3 border rounded ">
         <!-- encabezado -->
         <div class="container mt-5">
@@ -67,14 +66,14 @@
             <!-- datos cliente-->
 
             <div class="row g-2 justify-content-center">
-                <h2 class="text-center mt-3">Datos cliente</h2>
-                <div class="col-6">
+                <h2 class="text-center mt-5 mb-4">Datos cliente</h2>
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="nombre del cliente">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="numero" class="form-label">Numero de contacto</label>
                         <input type="number" class="form-control" id="numero" placeholder="+569-6942 1809">
@@ -82,13 +81,13 @@
                 </div>
             </div>
             <div class="row g-2 justify-content-center">
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="rut" class="form-label">Rut / Pasaporte</label>
                         <input type="number" class="form-control" id="rut" placeholder="Sin punto ni guion">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="correo" class="form-label">Email</label>
                         <input type="email" class="form-control" id="correo" placeholder="hola@tecnoboxchile.cl">
@@ -97,14 +96,14 @@
             </div>
             <!-- datos equipo-->
             <div class="row g-2 justify-content-center">
-                <h2 class="text-center mt-3">Datos Equipo</h2>
-                <div class="col-6">
+                <h2 class="text-center mt-5 mb-4">Datos Equipo</h2>
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
                         <input type="text" class="form-control" id="marca" placeholder="marca del celular">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo</label>
                         <input type="text" class="form-control" id="modelo" placeholder="modelo del celular">
@@ -112,13 +111,13 @@
                 </div>
             </div>
             <div class="row g-2 justify-content-center">
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="imei" class="form-label">Imei o serie</label>
                         <input type="text" class="form-control" id="imei" placeholder="ingrese codigo">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <div class="mb-3">
                         <label for="color" class="form-label">Color</label>
                         <input type="text" class="form-control" id="color">
@@ -127,12 +126,12 @@
             </div>
             <!-- reparaciones -->
             <div class="row g-2 justify-content-center mb-5">
-                <h2 class="text-center mt-3">Ingreso equipo</h2>
-                <div class="col-6 mb-3">
+                <h2 class="text-center mt-5 mb-4">Ingreso equipo</h2>
+                <div class="col-5 mb-3">
                     <label for="estado-telefono" class="form-label">Condicion del Equipo </label>
                     <textarea class="form-control" id="estado-telefono" rows="2"></textarea>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-5 mb-3">
                     <label for="problema" class="form-label">Problemas </label>
                     <textarea class="form-control" id="problema" rows="2"></textarea>
                 </div>
@@ -155,20 +154,26 @@
                             fabricante.</p>
                         <p>4.- Los equipos sulfatados <strong class="text-uppercase">no se pueden garantizar
                             </strong>tal cual lo dice el SERNAC.</p>
-                        <p>5.- Las garantias son  <strong class="text-uppercase">solo por el trabajo realizado</strong> en caso de falla de fabrica que no
+                        <p>5.- Las garantias son <strong class="text-uppercase">solo por el trabajo realizado</strong>
+                            en caso de falla de fabrica que no
                             involucre
                             manipulacion del cliente o
-                            terceros y es de  <strong class="text-uppercase">30 dias</strong> calendario desde su retiro.</p>
-                        <p>6.- El generar un respaldo de informacion es de <strong class="text-uppercase">responsabilidad del cliente.</strong> Cualquier trabajo
+                            terceros y es de <strong class="text-uppercase">30 dias</strong> calendario desde su retiro.
+                        </p>
+                        <p>6.- El generar un respaldo de informacion es de <strong
+                                class="text-uppercase">responsabilidad del cliente.</strong> Cualquier trabajo
                             tecnico puede derivar en una
                             perdida de informacion.</p>
-                        <p>7.- Lavados quimicos  <strong class="text-uppercase">no tienen ningun tipo de garantia</strong>, ya que esta no es una reparacion es
+                        <p>7.- Lavados quimicos <strong class="text-uppercase">no tienen ningun tipo de
+                                garantia</strong>, ya que esta no es una reparacion es
                             un
                             proceso de limpiesa del
                             equipo preventivo.</p>
-                        <p>8.- El equipo debe ser retirado dentro de un  <strong class="text-uppercase">plazo maximo de 90 dias</strong> o sera considerado como
+                        <p>8.- El equipo debe ser retirado dentro de un <strong class="text-uppercase">plazo maximo de
+                                90 dias</strong> o sera considerado como
                             pago por trabajo reaizado.</p>
-                        <p>9.- Al ingresar el  <strong class="text-uppercase">dispositivo apagado</strong>,  <strong class="text-uppercase">no se dara garantia</strong> en caso de que algun perifesrico
+                        <p>9.- Al ingresar el <strong class="text-uppercase">dispositivo apagado</strong>, <strong
+                                class="text-uppercase">no se dara garantia</strong> en caso de que algun perifesrico
                             falle luego de alguna reparacion
                             (camaras, microfonos, altavoces).</p>
                     </div>
