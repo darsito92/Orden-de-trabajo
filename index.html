@@ -42,146 +42,375 @@
             </div>
         </div>
     </nav>
-    <div class=" container-xl bg-light mt-3 mb-3 border rounded ">
-        <!-- encabezado -->
-        <div class="container mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 ">
-                        <img class="img-fluid" src="img/logo_tecno_transp.png" alt="logo-tecnobox">
-                    </div>
-                    <div class="col-7">
-                        <h1 class="text-center text-uppercase ">orden servicio Tecnico</h1>
-                        <p class="text-center">Fecha ingreso: <input type="date"></p>
-                    </div>
-                    <div class="col-2 g-1">
-                        <h3 class="fs-2">N°orden:xxx</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- datos tienda -->
-            <div class="container-xl my-4">
-                <h4 class="text-center text-uppercase"><strong>Tienda:</strong> servicio tecnico</h4>
-            </div>
-            <!-- datos cliente-->
+    <!-- Butones modales -->
+    <div class="container text-center mt-3">
+        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
+            data-bs-target="#modalOrden">Orden Servicio Tecnico</button>
+        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
+            data-bs-target="#modalInforme">Informe Servicio Tecnico</button>
+        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
+            data-bs-target="#modalPrecios">Precios</button>
+        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
+            data-bs-target="#modalServicios">Servicios</button>
+    </div>
 
-            <div class="row g-2 justify-content-center">
-                <h2 class="text-center mt-5 mb-4">Datos cliente</h2>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="nombre del cliente">
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="numero" class="form-label">Numero de contacto</label>
-                        <input type="number" class="form-control" id="numero" placeholder="+569-6942 1809">
-                    </div>
-                </div>
-            </div>
-            <div class="row g-2 justify-content-center">
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="rut" class="form-label">Rut / Pasaporte</label>
-                        <input type="number" class="form-control" id="rut" placeholder="Sin punto ni guion">
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="correo" placeholder="hola@tecnoboxchile.cl">
-                    </div>
-                </div>
-            </div>
-            <!-- datos equipo-->
-            <div class="row g-2 justify-content-center">
-                <h2 class="text-center mt-5 mb-4">Datos Equipo</h2>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="marca" class="form-label">Marca</label>
-                        <input type="text" class="form-control" id="marca" placeholder="marca del celular">
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="modelo" class="form-label">Modelo</label>
-                        <input type="text" class="form-control" id="modelo" placeholder="modelo del celular">
-                    </div>
-                </div>
-            </div>
-            <div class="row g-2 justify-content-center">
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="imei" class="form-label">Imei o serie</label>
-                        <input type="text" class="form-control" id="imei" placeholder="ingrese codigo">
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="color" class="form-label">Color</label>
-                        <input type="text" class="form-control" id="color">
-                    </div>
-                </div>
-            </div>
-            <!-- reparaciones -->
-            <div class="row g-2 justify-content-center mb-5">
-                <h2 class="text-center mt-5 mb-4">Ingreso equipo</h2>
-                <div class="col-5 mb-3">
-                    <label for="estado-telefono" class="form-label">Condicion del Equipo </label>
-                    <textarea class="form-control" id="estado-telefono" rows="2"></textarea>
-                </div>
-                <div class="col-5 mb-3">
-                    <label for="problema" class="form-label">Problemas </label>
-                    <textarea class="form-control" id="problema" rows="2"></textarea>
-                </div>
 
-                <div class="row justify-content-center">
-                    <div class="container-fluid my-4">
-                        <h4 class="text-center text-uppercase"><strong>IMPORTANTE:</strong> politica de servicio tecnico
-                        </h4>
-                    </div>
-                    <div class="col-10">
-                        <p>1.- La empresa <strong class="text-uppercase">NO se hace responsable</strong> por la perdida
-                            de algun accesorio (tarjeta de memoria,
-                            chip, carcasa, etc).</p>
-                        <p>2.- Si un equipo a reparar se abre desde la pantalla, este <strong
-                                class="text-uppercase">corre el riesgo</strong> de sufrir algun
-                            tipo de daño interno o en la misma
-                            pantalla.</p>
-                        <p>3.- Al entrar a taller se <strong class="text-uppercase">pierde en su totalidad la
-                                garantia</strong> dada por el proveedor o
-                            fabricante.</p>
-                        <p>4.- Los equipos sulfatados <strong class="text-uppercase">no se pueden garantizar
-                            </strong>tal cual lo dice el SERNAC.</p>
-                        <p>5.- Las garantias son <strong class="text-uppercase">solo por el trabajo realizado</strong>
-                            en caso de falla de fabrica que no
-                            involucre
-                            manipulacion del cliente o
-                            terceros y es de <strong class="text-uppercase">30 dias</strong> calendario desde su retiro.
-                        </p>
-                        <p>6.- El generar un respaldo de informacion es de <strong
-                                class="text-uppercase">responsabilidad del cliente.</strong> Cualquier trabajo
-                            tecnico puede derivar en una
-                            perdida de informacion.</p>
-                        <p>7.- Lavados quimicos <strong class="text-uppercase">no tienen ningun tipo de
-                                garantia</strong>, ya que esta no es una reparacion es
-                            un
-                            proceso de limpiesa del
-                            equipo preventivo.</p>
-                        <p>8.- El equipo debe ser retirado dentro de un <strong class="text-uppercase">plazo maximo de
-                                90 dias</strong> o sera considerado como
-                            pago por trabajo reaizado.</p>
-                        <p>9.- Al ingresar el <strong class="text-uppercase">dispositivo apagado</strong>, <strong
-                                class="text-uppercase">no se dara garantia</strong> en caso de que algun perifesrico
-                            falle luego de alguna reparacion
-                            (camaras, microfonos, altavoces).</p>
+    <!-- Modal orden -->
+    <div class="modal fade" id="modalOrden" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalOrdenLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalOrdenLabel">Orden de trabajo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class=" container-fluid bg-light mt-3 mb-3 border rounded ">
+                        <!-- encabezado -->
+                        <div class="container mt-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col ">
+                                        <img class="img-fluid" src="img/logo_tecno_transp.png" alt="logo-tecnobox">
+                                    </div>
+                                    <div class="col">
+
+                                        <p class="text-center">Fecha ingreso: <input type="date"></p>
+                                    </div>
+                                    <div class="col ">
+                                        <h3 class="fs-2">N°orden:xxx</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- datos tienda -->
+                            <div class="container-fluid my-4">
+                                <h4 class="text-center text-uppercase"><strong>Tienda:</strong> servicio tecnico</h4>
+                            </div>
+                            <!-- datos cliente-->
+
+                            <div class="row g-2 justify-content-center">
+                                <h2 class="text-center mt-5 mb-4">Datos cliente</h2>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre"
+                                            placeholder="nombre del cliente">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="numero" class="form-label">Numero de contacto</label>
+                                        <input type="number" class="form-control" id="numero"
+                                            placeholder="+569-6942 1809">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 justify-content-center">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="rut" class="form-label">Rut / Pasaporte</label>
+                                        <input type="text" class="form-control" id="rut"
+                                            placeholder="Sin punto ni guion">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="correo" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="correo"
+                                            placeholder="hola@tecnoboxchile.cl">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- datos equipo-->
+                            <div class="row g-2 justify-content-center">
+                                <h2 class="text-center mt-5 mb-4">Datos Equipo</h2>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="marca" class="form-label">Marca</label>
+                                        <input type="text" class="form-control" id="marca"
+                                            placeholder="marca del celular">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="modelo" class="form-label">Modelo</label>
+                                        <input type="text" class="form-control" id="modelo"
+                                            placeholder="modelo del celular">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 justify-content-center">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="imei" class="form-label">Imei o serie</label>
+                                        <input type="text" class="form-control" id="imei" placeholder="ingrese codigo">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="color" class="form-label">Color</label>
+                                        <input type="text" class="form-control" id="color">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- reparaciones -->
+                            <div class="row g-2 justify-content-center mb-5">
+                                <h2 class="text-center mt-5 mb-4">Ingreso equipo</h2>
+                                <div class="col mb-3">
+                                    <label for="estado-telefono" class="form-label">Condicion del Equipo </label>
+                                    <textarea class="form-control" id="estado-telefono" rows="2"></textarea>
+                                </div>
+                                <div class="col mb-3">
+                                    <label for="problema" class="form-label">Problemas </label>
+                                    <textarea class="form-control" id="problema" rows="2"></textarea>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="container-fluid my-4">
+                                        <h4 class="text-center text-uppercase"><strong>IMPORTANTE:</strong> politica de
+                                            servicio tecnico
+                                        </h4>
+                                    </div>
+                                    <div class="col-10">
+                                        <p>1.- La empresa <strong class="text-uppercase">NO se hace responsable</strong>
+                                            por la perdida
+                                            de algun accesorio (tarjeta de memoria,
+                                            chip, carcasa, etc).</p>
+                                        <p>2.- Si un equipo a reparar se abre desde la pantalla, este <strong
+                                                class="text-uppercase">corre el riesgo</strong> de sufrir algun
+                                            tipo de daño interno o en la misma
+                                            pantalla.</p>
+                                        <p>3.- Al entrar a taller se <strong class="text-uppercase">pierde en su
+                                                totalidad la
+                                                garantia</strong> dada por el proveedor o
+                                            fabricante.</p>
+                                        <p>4.- Los equipos sulfatados <strong class="text-uppercase">no se pueden
+                                                garantizar
+                                            </strong>tal cual lo dice el SERNAC.</p>
+                                        <p>5.- Las garantias son <strong class="text-uppercase">solo por el trabajo
+                                                realizado</strong>
+                                            en caso de falla de fabrica que no
+                                            involucre
+                                            manipulacion del cliente o
+                                            terceros y es de <strong class="text-uppercase">30 dias</strong> calendario
+                                            desde su retiro.
+                                        </p>
+                                        <p>6.- El generar un respaldo de informacion es de <strong
+                                                class="text-uppercase">responsabilidad del cliente.</strong> Cualquier
+                                            trabajo
+                                            tecnico puede derivar en una
+                                            perdida de informacion.</p>
+                                        <p>7.- Lavados quimicos <strong class="text-uppercase">no tienen ningun tipo de
+                                                garantia</strong>, ya que esta no es una reparacion es
+                                            un
+                                            proceso de limpiesa del
+                                            equipo preventivo.</p>
+                                        <p>8.- El equipo debe ser retirado dentro de un <strong
+                                                class="text-uppercase">plazo maximo de
+                                                90 dias</strong> o sera considerado como
+                                            pago por trabajo reaizado.</p>
+                                        <p>9.- Al ingresar el <strong class="text-uppercase">dispositivo
+                                                apagado</strong>, <strong class="text-uppercase">no se dara
+                                                garantia</strong> en caso de que algun perifesrico
+                                            falle luego de alguna reparacion
+                                            (camaras, microfonos, altavoces).</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Modal informe -->
+    <div class="modal fade" id="modalInforme" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalInformeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalInformeLabel">Informe de Servicio Tecnico</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class=" container-fluid bg-light mt-3 mb-3 border rounded ">
+                        <!-- encabezado -->
+                        <div class="container mt-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col ">
+                                        <img class="img-fluid" src="img/logo_tecno_transp.png" alt="logo-tecnobox">
+                                    </div>
+                                    <div class="col">
+
+                                        <p class="text-center">Fecha ingreso: <input type="date"></p>
+                                    </div>
+                                    <div class="col ">
+                                        <h3 class="fs-2">N°orden:xxx</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- datos tienda -->
+                            <div class="container-fluid my-4">
+                                <h4 class="text-center text-uppercase"><strong>Tienda:</strong> servicio tecnico</h4>
+                            </div>
+
+                            <!-- datos equipo-->
+                            <div class="row g-2 justify-content-center">
+                                <h2 class="text-center mt-5 mb-4">Datos Equipo</h2>
+                                <div class="col-5">
+                                    <div class="mb-3">
+                                        <label for="marca" class="form-label">Marca</label>
+                                        <input type="text" class="form-control" id="marca"
+                                            placeholder="marca del celular">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="mb-3">
+                                        <label for="modelo" class="form-label">Modelo</label>
+                                        <input type="text" class="form-control" id="modelo"
+                                            placeholder="modelo del celular">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 justify-content-center">
+                                <div class="col-5">
+                                    <div class="mb-3">
+                                        <label for="imei" class="form-label">Imei o serie</label>
+                                        <input type="text" class="form-control" id="imei" placeholder="ingrese codigo">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="mb-3">
+                                        <label for="color" class="form-label">Color</label>
+                                        <input type="text" class="form-control" id="color">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- reparaciones -->
+                            <div class="row g-2 justify-content-center mb-5">
+                                <h2 class="text-center mt-5 mb-4">Ingreso equipo</h2>
+                                <div class="col-5 mb-3">
+                                    <label for="estado-telefono" class="form-label">Condicion del Equipo </label>
+                                    <textarea class="form-control" id="estado-telefono" rows="2"></textarea>
+                                </div>
+                                <div class="col-5 mb-3">
+                                    <label for="problema" class="form-label">Problemas </label>
+                                    <textarea class="form-control" id="problema" rows="2"></textarea>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="container-fluid my-4">
+                                        <h4 class="text-center text-uppercase"><strong>IMPORTANTE:</strong> politica de
+                                            servicio tecnico
+                                        </h4>
+                                    </div>
+                                    <div class="col-10">
+                                        <p>1.- La empresa <strong class="text-uppercase">NO se hace responsable</strong>
+                                            por la perdida
+                                            de algun accesorio (tarjeta de memoria,
+                                            chip, carcasa, etc).</p>
+                                        <p>2.- Si un equipo a reparar se abre desde la pantalla, este <strong
+                                                class="text-uppercase">corre el riesgo</strong> de sufrir algun
+                                            tipo de daño interno o en la misma
+                                            pantalla.</p>
+                                        <p>3.- Al entrar a taller se <strong class="text-uppercase">pierde en su
+                                                totalidad la
+                                                garantia</strong> dada por el proveedor o
+                                            fabricante.</p>
+                                        <p>4.- Los equipos sulfatados <strong class="text-uppercase">no se pueden
+                                                garantizar
+                                            </strong>tal cual lo dice el SERNAC.</p>
+                                        <p>5.- Las garantias son <strong class="text-uppercase">solo por el trabajo
+                                                realizado</strong>
+                                            en caso de falla de fabrica que no
+                                            involucre
+                                            manipulacion del cliente o
+                                            terceros y es de <strong class="text-uppercase">30 dias</strong> calendario
+                                            desde su retiro.
+                                        </p>
+                                        <p>6.- El generar un respaldo de informacion es de <strong
+                                                class="text-uppercase">responsabilidad del cliente.</strong> Cualquier
+                                            trabajo
+                                            tecnico puede derivar en una
+                                            perdida de informacion.</p>
+                                        <p>7.- Lavados quimicos <strong class="text-uppercase">no tienen ningun tipo de
+                                                garantia</strong>, ya que esta no es una reparacion es
+                                            un
+                                            proceso de limpiesa del
+                                            equipo preventivo.</p>
+                                        <p>8.- El equipo debe ser retirado dentro de un <strong
+                                                class="text-uppercase">plazo maximo de
+                                                90 dias</strong> o sera considerado como
+                                            pago por trabajo reaizado.</p>
+                                        <p>9.- Al ingresar el <strong class="text-uppercase">dispositivo
+                                                apagado</strong>, <strong class="text-uppercase">no se dara
+                                                garantia</strong> en caso de que algun perifesrico
+                                            falle luego de alguna reparacion
+                                            (camaras, microfonos, altavoces).</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Precios -->
+    <div class="modal fade" id="modalPrecios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPreciosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPreciosLabel">Precios</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class=" container-fluid bg-light mt-3 mb-3 border rounded ">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal Servicios -->
+<div class="modal fade" id="modalPrecios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="modalPreciosLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalPreciosLabel">Precios</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class=" container-fluid bg-light mt-3 mb-3 border rounded ">
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+</div>
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
