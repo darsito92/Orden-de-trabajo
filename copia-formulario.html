@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form method="post" id="guardar_servicio" name="guardar_servicio" style="display: flex;">
+        <div class="row mb-2">
+            <label for="fecha_recepcion" class="col-sm-3 col-form-label">Fecha de recep.</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="fecha_recepcion" name="fecha_recepcion" value="18-08-2023" placeholder="Fecha de recepción" data-date-format="dd-mm-yyyy" readonly="readonly" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="hora_recepcion" class="col-sm-3 col-form-label">Hora de recep.</label>
+            <div class="col-sm-8">
+                <input type="time" class="form-control" id="hora_recepcion" name="hora_recepcion" value="20:44" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="id_local" class="col-sm-3 col-form-label">Local</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="id_local" id="id_local" required="required" autocomplete="off">
+                                                            <option value="ADMINISTRACION FELIPE P. SPA" data-sigla="AF">ADMINISTRACION FELIPE P. SPA</option>
+                                                            <option value="ADMINISTRACION RICARDO S. SPA" data-sigla="AR">ADMINISTRACION RICARDO S. SPA</option>
+                                                            <option value="ALERCE" data-sigla="AMA">ALERCE</option>
+                                                            <option value="ANDALUE" data-sigla="AND">ANDALUE</option>
+                                                            <option value="ANGOL" data-sigla="ANG">ANGOL</option>
+                                                            <option value="AVALEMANIA" data-sigla="AV">AVALEMANIA</option>
+                                                            <option value="AZALEAS" data-sigla="AZA ">AZALEAS</option>
+                                                            <option value="BARRIOINGLES" data-sigla="BI1">BARRIOINGLES</option>
+                                                            <option value="BARRIOINGLES2" data-sigla="BI2">BARRIOINGLES2</option>
+                                                            <option value="BARROSARANA" data-sigla="BA">BARROSARANA</option>
+                                                            <option value="BIOBIO" data-sigla="BIO">BIOBIO</option>
+                                                            <option value="BODEGA" data-sigla="EX">BODEGA</option>
+                                                            <option value="BOSQUEMAR" data-sigla="BOS">BOSQUEMAR</option>
+                                                            <option value="CARAHUE" data-sigla="CRH">CARAHUE</option>
+                                                            <option value="CARRUSEL" data-sigla="CRR">CARRUSEL</option>
+                                                            <option value="CAUPOLICAN" data-sigla="CAU">CAUPOLICAN</option>
+                                                            <option value="CHILLAN1" data-sigla="CHI1">CHILLAN1</option>
+                                                            <option value="CHILLAN2" data-sigla="CHI2">CHILLAN2</option>
+                                                            <option value="CHILLAN3" data-sigla="CHI3">CHILLAN3</option>
+                                                            <option value="CHILLAN4" data-sigla="CHI4">CHILLAN4</option>
+                                                            <option value="COLLAO" data-sigla="CO">COLLAO</option>
+                                                            <option value="cornershop" data-sigla="CNP ">cornershop</option>
+                                                            <option value="CORONEL" data-sigla="CR">CORONEL</option>
+                                                            <option value="COSTANERA" data-sigla="CSTN">COSTANERA</option>
+                                                            <option value="CUNCO" data-sigla="CNCO">CUNCO</option>
+                                                            <option value="CURICO" data-sigla="CR">CURICO</option>
+                                                            <option value="CURICO2" data-sigla="CR2">CURICO2</option>
+                                                            <option value="FULL" data-sigla="FULL">FULL</option>
+                                                            <option value="GALVARINO" data-sigla="GV  ">GALVARINO</option>
+                                                            <option value="HICELL" data-sigla="H">HICELL</option>
+                                                            <option value="INFORMATICA" data-sigla="INF">INFORMATICA</option>
+                                                            <option value="LA FLORIDA" data-sigla="LD  ">LA FLORIDA</option>
+                                                            <option value="LABRANZA" data-sigla="LBZ ">LABRANZA</option>
+                                                            <option value="LASVEGAS" data-sigla="LVG ">LASVEGAS</option>
+                                                            <option value="LAUTARO" data-sigla="LAU ">LAUTARO</option>
+                                                            <option value="LIDERPRIETO" data-sigla="PN  ">LIDERPRIETO</option>
+                                                            <option value="LIDERRO" data-sigla="RO  ">LIDERRO</option>
+                                                            <option value="LOSANGELES" data-sigla="LA  ">LOSANGELES</option>
+                                                            <option value="LOSHEROES" data-sigla="LHS">LOSHEROES</option>
+                                                            <option value="MACKENNA" data-sigla="MK  ">MACKENNA</option>
+                                                            <option value="MALLEASTON" data-sigla="ME  ">MALLEASTON</option>
+                                                            <option value="MALLPLAZANORTE" data-sigla="MPN">MALLPLAZANORTE</option>
+                                                            <option value="MALLPLAZASUR" data-sigla="MPS">MALLPLAZASUR</option>
+                                                            <option value="MALLPLAZATOBALABA" data-sigla="MPT">MALLPLAZATOBALABA</option>
+                                                            <option value="MANTENCION RUBEN PARDO" data-sigla="SMEL">MANTENCION RUBEN PARDO</option>
+                                                            <option value="MASSMANN" data-sigla="GM  ">MASSMANN</option>
+                                                            <option value="MERCADO" data-sigla="MC  ">MERCADO</option>
+                                                            <option value="MERCADOLIBRE" data-sigla="ML  ">MERCADOLIBRE</option>
+                                                            <option value="MIRAGE" data-sigla="MGE ">MIRAGE</option>
+                                                            <option value="MODULO" data-sigla="MD  ">MODULO</option>
+                                                            <option value="MONTT" data-sigla="M1  ">MONTT</option>
+                                                            <option value="MONTT2" data-sigla="M2">MONTT2</option>
+                                                            <option value="MONTT3" data-sigla="M3  ">MONTT3</option>
+                                                            <option value="NIELOL" data-sigla="N1  ">NIELOL</option>
+                                                            <option value="NIELOL2" data-sigla="N2  ">NIELOL2</option>
+                                                            <option value="NOTROS" data-sigla="NTR ">NOTROS</option>
+                                                            <option value="NUEVAIMPERIAL" data-sigla="NVI ">NUEVAIMPERIAL</option>
+                                                            <option value="PADREDELASCASAS" data-sigla="PLC1">PADREDELASCASAS</option>
+                                                            <option value="PADREDELASCASAS2" data-sigla="PLC2">PADREDELASCASAS2</option>
+                                                            <option value="PEDIDOSYA" data-sigla="PY  ">PEDIDOSYA</option>
+                                                            <option value="PITRUFQUEN" data-sigla="PFN">PITRUFQUEN</option>
+                                                            <option value="PRAT" data-sigla="PT1 ">PRAT</option>
+                                                            <option value="PRAT2" data-sigla="PT2 ">PRAT2</option>
+                                                            <option value="PRUEBA" data-sigla="TEST">PRUEBA</option>
+                                                            <option value="PUERTOVARAS" data-sigla="PV  ">PUERTOVARAS</option>
+                                                            <option value="RAICES HUMANAS" data-sigla="RHSPA">RAICES HUMANAS</option>
+                                                            <option value="RANCAGUA1" data-sigla="RCG1">RANCAGUA1</option>
+                                                            <option value="RANCAGUA2" data-sigla="RCG2">RANCAGUA2</option>
+                                                            <option value="RANCAGUA3" data-sigla="RCG3">RANCAGUA3</option>
+                                                            <option value="RANCAGUA4" data-sigla="RCG4">RANCAGUA4</option>
+                                                            <option value="SEVILLA" data-sigla="SV  ">SEVILLA</option>
+                                                            <option value="ST_NIELOL" data-sigla="ST">ST_NIELOL</option>
+                                                            <option value="ST_VALDIVIA2" data-sigla="ST">ST_VALDIVIA2</option>
+                                                            <option value="TALCA" data-sigla="TLC ">TALCA</option>
+                                                            <option value="TALCAHUANO" data-sigla="THO">TALCAHUANO</option>
+                                                            <option value="TECNOBOXRENACA" data-sigla="NULL">TECNOBOXRENACA</option>
+                                                            <option value="TEODORO" data-sigla="TODR">TEODORO</option>
+                                                            <option value="TRAIGUEN" data-sigla="TGN">TRAIGUEN</option>
+                                                            <option value="UNIMARCAVALEMANIA" data-sigla="UA  ">UNIMARCAVALEMANIA</option>
+                                                            <option value="VALDIVIA1" data-sigla="V1  ">VALDIVIA1</option>
+                                                            <option value="VALDIVIA2" data-sigla="V2  ">VALDIVIA2</option>
+                                                            <option value="VALDIVIA3" data-sigla="V3">VALDIVIA3</option>
+                                                            <option value="VALDIVIA4.1" data-sigla="V4.1">VALDIVIA4.1</option>
+                                                            <option value="VALDIVIA5" data-sigla="V5  ">VALDIVIA5</option>
+                                                            <option value="VALDIVIA6" data-sigla="V6  ">VALDIVIA6</option>
+                                                            <option value="VALDIVIA7" data-sigla="V7">VALDIVIA7</option>
+                                                            <option value="VALPARAISO" data-sigla="VS  ">VALPARAISO</option>
+                                                            <option value="VENTAS_MAYORISTA" data-sigla="VM  ">VENTAS_MAYORISTA</option>
+                                                            <option value="VENTAWEB" data-sigla="VW  ">VENTAWEB</option>
+                                                            <option value="VICTORIA" data-sigla="VIC ">VICTORIA</option>
+                                                            <option value="VILLAGRAN" data-sigla="VG  ">VILLAGRAN</option>
+                                                            <option value="VILLARRICAACUENTA" data-sigla="VRC2">VILLARRICAACUENTA</option>
+                                                            <option value="VILLARRICALIDER" data-sigla="VRC1">VILLARRICALIDER</option>
+                                                            <option value="VINA" data-sigla="VNA1">VINA</option>
+                                                            <option value="VINA2" data-sigla="VNA2">VINA2</option>
+                                                            <option value="VIVO" data-sigla="VI  ">VIVO</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="row mb-2 visually-hidden">
+            <label for="id_local_st" class="col-sm-3 col-form-label">Taller Servicio Técnico</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="id_local_st" id="id_local_st" autocomplete="off">
+                                                            <option value="ST_NIELOL">
+                            ST_NIELOL										</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="trabajo" class="col-sm-3 col-form-label">Trabajo a realizar</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="trabajo" id="trabajo" required="required" autocomplete="off" autofocus="">
+                    <option value="">Selecciona el trabajo a realizar</option>
+                                                            <option value="Batería">BATERíA</option>
+                                                            <option value="Cámara Frontal">CáMARA FRONTAL</option>
+                                                            <option value="Cámara Trasera">CáMARA TRASERA</option>
+                                                            <option value="Cuenta Google">CUENTA GOOGLE</option>
+                                                            <option value="Flex de Carga">FLEX DE CARGA</option>
+                                                            <option value="Formateo">FORMATEO</option>
+                                                            <option value="Garantia">GARANTIA</option>
+                                                            <option value="Jack de Carga">JACK DE CARGA</option>
+                                                            <option value="Lavado Químico">LAVADO QUíMICO</option>
+                                                            <option value="Mano de Obra">MANO DE OBRA</option>
+                                                            <option value="Mantención">MANTENCIóN</option>
+                                                            <option value="Micrófono">MICRóFONO</option>
+                                                            <option value="Pantalla">PANTALLA</option>
+                                                            <option value="Revisión">REVISIóN</option>
+                                                            <option value="Sistema">SISTEMA</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <input type="hidden" class="form-control invisible" id="fecha_entrega" name="fecha_entrega" placeholder="Fecha de recepción" data-date-format="dd-mm-yyyy" readonly="readonly" autocomplete="off">
+            <label for="fecha_recepcion" class="col-sm-3 col-form-label">Servicio / Repuesto</label>
+            <div class="col-sm-8">
+                <input type="text" list="listProductoST" class="form-control" aria-label="ProductoST" name="ProductoST" id="ProductoST" placeholder="Selecciona producto de Servicio Técnico">
+                <datalist id="listProductoST">
+                                                            <option value="FORMATEO-PC-S-RESPALDO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">FORMATEOS PC SIN RESPALDO (Ref: $ 14.990)</option>
+                                                            <option value="MANO-OBRA-CELULAR" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">MANO DE OBRA CELULARES (Ref: $ 19.990)</option>
+                                                            <option value="MANO-OBRA-TABLET" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">MANO DE OBRA TABLET (Ref: $ 24.990)</option>
+                                                            <option value="JAC-CARGA-MICROUSB" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">JACK DE CARGA MICRO USB (Ref: $ 19.990)</option>
+                                                            <option value="SISTEMA" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">SISTEMA (Ref: $ 9.990)</option>
+                                                            <option value="CUENTO-GOOGLE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">CUENTA GOOGLE (Ref: $ 14.990)</option>
+                                                            <option value="PROGRAMA-DE-PC" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">PROGRAMAS DE PC A PEDIDO (Ref: $ 9.990)</option>
+                                                            <option value="CAMBIO-PASTA-TERMICO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">CAMBIO DE PASTA TERMICA (Ref: $ 19.990)</option>
+                                                            <option value="LAVADO-QUIMICO" data-precio="$ 19.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">LAVADOS QUIMICOS (Ref: $ 19.990)</option>
+                                                            <option value="MANTENCION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">MANTENCION (Ref: $ 9.990)</option>
+                                                            <option value="OTROS" data-precio="$ 1" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 1">OTROS (Ref: $ 1)</option>
+                                                            <option value="GARANTIA" data-precio="$ 1" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 1">SERVICIO POR GARANTIA (Ref: $ 1)</option>
+                                                            <option value="REVISION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">REVISION (Ref: $ 9.990)</option>
+                                                            <option value="MANO-OBRA-CELULAR-IPHONE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">Mano de Obra (Ref: $ 29.990)</option>
+                                                            <option value="MANO-OBRA-CELULAR-SELLADO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">Mano de Obra (Ref: $ 9.990)</option>
+                                                            <option value="PANTALLA-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN PANTALLA IPHONE 5 (Ref: $ 19.990)</option>
+                                                            <option value="PANTALLA-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN PANTALLA IPHONE 5S (Ref: $ 22.990)</option>
+                                                            <option value="PANTALLA-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN PANTALLA IPHONE 5c (Ref: $ 19.990)</option>
+                                                            <option value="PANTALLA-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN PANTALLA IPHONE 5SE (Ref: $ 24.990)</option>
+                                                            <option value="PANTALLA-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN PANTALLA IPHONE 6 (Ref: $ 29.990)</option>
+                                                            <option value="PANTALLA-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN PANTALLA IPHONE 6S (Ref: $ 34.990)</option>
+                                                            <option value="PANTALLA-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA IPHONE 6 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 44.990">REPARACIÓN PANTALLA IPHONE 6s PLUS (Ref: $ 44.990)</option>
+                                                            <option value="PANTALLA-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA IPHONE 7 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN PANTALLA IPHONE 7 PLUS (Ref: $ 54.990)</option>
+                                                            <option value="PANTALLA-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA IPHONE 8 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA IPHONE 8 PLUS (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 99.990">REPARACIÓN PANTALLA IPHONE X (Ref: $ 99.990)</option>
+                                                            <option value="PANTALLA-IPHONE- XS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 129.990">REPARACIÓN PANTALLA IPHONE  XS (Ref: $ 129.990)</option>
+                                                            <option value="PANTALLA-IPHONE-XS MAX" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 149.990">REPARACIÓN PANTALLA IPHONE XS MAX (Ref: $ 149.990)</option>
+                                                            <option value="PANTALLA-IPHONE-11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 139.990">REPARACIÓN PANTALLA IPHONE 11 (Ref: $ 139.990)</option>
+                                                            <option value="PANTALLA-IPHONE-11 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 169.990">REPARACIÓN PANTALLA IPHONE 11 PRO (Ref: $ 169.990)</option>
+                                                            <option value="PANTALLA-IPHONE-11 PRO MAX" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 199.990">REPARACIÓN PANTALLA IPHONE 11 PRO MAX (Ref: $ 199.990)</option>
+                                                            <option value="PANTALLA-IPHONE-XR" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA IPHONE XR (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-IPHONE-SE 2020" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA IPHONE SE 2020 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-GPLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI GPLAY (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-GPLAY MINI" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA HUAWEI GPLAY MINI (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI MATE 8 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y7 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI Y7 2018 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y7 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN PANTALLA HUAWEI Y7 2019 (Ref: $ 54.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y6 2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y6 2 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y6 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y6 2019 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y9S " data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y9S  (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y9 PRIME 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y9 PRIME 2019 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y9 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y9 2019 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y8S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI Y8S (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI MATE 9 LITE (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI MATE 9 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA HUAWEI MATE 10 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI MATE 10 LITE (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-MATE 20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI MATE 20 LITE (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA HUAWEI P10 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI P10 LITE (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI P9 LITE (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P9 LITE 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 44.990">REPARACIÓN PANTALLA HUAWEI P9 LITE 2017 (Ref: $ 44.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI P9 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-PSMART 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA HUAWEI PSMART 2018 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P SMART 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI P SMART 2019 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA HUAWEI P20 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN PANTALLA HUAWEI P20 LITE (Ref: $ 54.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-NOVA 3i" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA HUAWEI NOVA 3i (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-NOVA 5T" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 99.990">REPARACIÓN PANTALLA HUAWEI NOVA 5T (Ref: $ 99.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P30 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA HUAWEI P30 LITE (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-P40 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA HUAWEI P40 LITE (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J5 PRIME" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG J5 PRIME (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J5 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA SAMSUNG J5 2016 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J6 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG J6 2018 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA SAMSUNG J6 PLUS (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J7 / J7 NEO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG J7 / J7 NEO (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J2 prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA SAMSUNG J2 prime (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J7 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA SAMSUNG J7 2016 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG J4 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG J4 PLUS (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J7 Prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG J7 Prime (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J7 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG J7 PRO (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-J8 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG J8 2018 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A03" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA SAMSUNG A03 (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A13 " data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA SAMSUNG A13  (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A33 original con marco" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A33 original con marco (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A53" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 109.990">REPARACIÓN PANTALLA SAMSUNG A53 (Ref: $ 109.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A01" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA SAMSUNG A01 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A02" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG A02 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A12" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG A12 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A02S/A03S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG A02S/A03S (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG A10 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A21S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG A21S (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A22" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 129.990">REPARACIÓN PANTALLA SAMSUNG A22 (Ref: $ 129.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A32" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A32 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A52" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 119.990">REPARACIÓN PANTALLA SAMSUNG A52 (Ref: $ 119.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A72" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 189.990">REPARACIÓN PANTALLA SAMSUNG A72 (Ref: $ 189.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A10S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA SAMSUNG A10S (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG A11 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A71" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 149.990">REPARACIÓN PANTALLA SAMSUNG A71 (Ref: $ 149.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG A20 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A20S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A20S (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A30 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A31" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 99.990">REPARACIÓN PANTALLA SAMSUNG A31 (Ref: $ 99.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A30S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A30S (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA SAMSUNG A50 (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A51" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 169.990">REPARACIÓN PANTALLA SAMSUNG A51 (Ref: $ 169.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A70" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA SAMSUNG A70 (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA  MOTO C (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN PANTALLA  MOTO G (Ref: $ 29.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN PANTALLA  MOTO G2 (Ref: $ 34.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA  MOTO G3 (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO x" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA  MOTO x (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO x2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO x2 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO E" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN PANTALLA  MOTO E (Ref: $ 29.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO E2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN PANTALLA  MOTO E2 (Ref: $ 34.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO E4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO E4 PLUS (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO E4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO E4 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO E5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO E5 PLUS (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO G5 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G6 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO G6 PLAY (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G8 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO G8 PLAY (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G8 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA  MOTO G8 POWER (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G8 POWER LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA  MOTO G8 POWER LITE (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G9 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA  MOTO G9 PLUS (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G9 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA  MOTO G9 POWER (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G9 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA  MOTO G9 PLAY (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G4 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO G4 PLAY (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G5 S PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO G5 S PLUS (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G5 S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO G5 S (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO G5 PLUS (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO ONE FUSION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA  MOTO ONE FUSION (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO ONE MACRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO ONE MACRO (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO ONE VISION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA  MOTO ONE VISION (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO G20 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA  MOTO G30 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO X PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO X PLAY (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO Z PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 99.990">REPARACIÓN PANTALLA  MOTO Z PLAY (Ref: $ 99.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-MOTO G4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA  MOTO G4 PLUS (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 8 " data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 8  (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI 9C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA XIAOMI REDMI 9C (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 8 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 89.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 8 PRO (Ref: $ 89.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI 10C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 44.990">REPARACIÓN PANTALLA XIAOMI REDMI 10C (Ref: $ 44.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 9 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 10/10S (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 11 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 119.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 11 PRO (Ref: $ 119.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI NOTE 9S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA XIAOMI REDMI NOTE 9S (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA XIAOMI REDMI 9 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-XIAOMI-REDMI 9A" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA XIAOMI REDMI 9A (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-LG-LG K4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA LG LG K4 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-LG-LG K8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA LG LG K8 (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-LG-LG K9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA LG LG K9 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-LG-LG K10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA LG LG K10 (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-LG-LG K11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA LG LG K11 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-LG-K10 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA LG K10 2017 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-LG-LG K50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA LG LG K50 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-LG-LG K50s" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA LG LG K50s (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-LG-LG K40s" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA LG LG K40s (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-LG-LG Q60" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA LG LG Q60 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-LG-G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA LG G2 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-LG-G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN PANTALLA LG G3 (Ref: $ 54.990)</option>
+                                                            <option value="PANTALLA-NOKIA-3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN PANTALLA NOKIA 3 (Ref: $ 39.990)</option>
+                                                            <option value="PANTALLA-NOKIA-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA NOKIA 5 (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-NOKIA-5.1" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN PANTALLA NOKIA 5.1 (Ref: $ 54.990)</option>
+                                                            <option value="PANTALLA-NOKIA-44202" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA NOKIA 44202 (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-NOKIA-5.1 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA NOKIA 5.1 PLUS (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-NOKIA-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA NOKIA 6 (Ref: $ 59.990)</option>
+                                                            <option value="BATERIA-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 15.990">REPARACIÓN BATERIA IPHONE 5 (Ref: $ 15.990)</option>
+                                                            <option value="BATERIA-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 15.990">REPARACIÓN BATERIA IPHONE 5 (Ref: $ 15.990)</option>
+                                                            <option value="BATERIA-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 15.990">REPARACIÓN BATERIA IPHONE 5c (Ref: $ 15.990)</option>
+                                                            <option value="BATERIA-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA IPHONE 5SE (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 21.990">REPARACIÓN BATERIA IPHONE 6 (Ref: $ 21.990)</option>
+                                                            <option value="BATERIA-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA IPHONE 6S (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 26.990">REPARACIÓN BATERIA IPHONE 6 PLUS (Ref: $ 26.990)</option>
+                                                            <option value="BATERIA-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA IPHONE 6s PLUS (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA IPHONE 7 (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN BATERIA IPHONE 7 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="BATERIA-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN BATERIA IPHONE 8 (Ref: $ 34.990)</option>
+                                                            <option value="BATERIA-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN BATERIA IPHONE 8 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="BATERIA-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN BATERIA IPHONE X (Ref: $ 49.990)</option>
+                                                            <option value="BATERIA-IPHONE- XS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN BATERIA IPHONE  XS (Ref: $ 49.990)</option>
+                                                            <option value="BATERIA-IPHONE-XS MAX" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN BATERIA IPHONE XS MAX (Ref: $ 49.990)</option>
+                                                            <option value="BATERIA-IPHONE-11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN BATERIA IPHONE 11 (Ref: $ 49.990)</option>
+                                                            <option value="BATERIA-IPHONE-11 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN BATERIA IPHONE 11 PRO (Ref: $ 49.990)</option>
+                                                            <option value="BATERIA-IPHONE-XR" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN BATERIA IPHONE XR (Ref: $ 39.990)</option>
+                                                            <option value="BATERIA-IPHONE-SE 2020" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA IPHONE SE 2020 (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-HUAWEI-GPLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI GPLAY (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-GPLAY MINI" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI GPLAY MINI (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI MATE 8 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-Y7 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI Y7 2018 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-Y7 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI Y7 2019 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-Y6 2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI Y6 2 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-Y9 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI Y9 2019 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI MATE 9 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI MATE 9 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA HUAWEI MATE 10 (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI MATE 10 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-MATE 20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI MATE 20 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA HUAWEI P10 (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI P10 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI P9 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P9 LITE 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI P9 LITE 2017 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI P9 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-PSMART 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA HUAWEI PSMART 2018 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P SMART 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI P SMART 2019 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA HUAWEI P20 (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA HUAWEI P20 LITE (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P30 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA HUAWEI P30 LITE (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-HUAWEI-P40 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA HUAWEI P40 LITE (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J5 PRIME" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA SAMSUNG J5 PRIME (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J5 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA SAMSUNG J5 2016 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J6 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA SAMSUNG J6 2018 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG J6 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA SAMSUNG J4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J7 Prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA SAMSUNG J7 Prime (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J7 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG J7 PRO (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-J8 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG J8 2018 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-A10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG A10 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-A20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG A20 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-A30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG A30 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-A31" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG A31 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-SAMSUNG-A50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA SAMSUNG A50 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">REPARACIÓN BATERIA  MOTO G (Ref: $ 14.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">REPARACIÓN BATERIA  MOTO G2 (Ref: $ 14.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO G3 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO x" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO x (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO x2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO x2 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO E" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO E (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO E2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO E2 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO E4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO E4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO E4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO E4 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO E5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO E5 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO G5 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G6 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO G6 PLAY (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G8 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA  MOTO G8 PLAY (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G4 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO G4 PLAY (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G5 S PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO G5 S PLUS (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G5 S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO G5 S (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO G5 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO X PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA  MOTO X PLAY (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO Z PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN BATERIA  MOTO Z PLAY (Ref: $ 29.990)</option>
+                                                            <option value="BATERIA-MOTOROLA-MOTO G4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA  MOTO G4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-NOKIA-3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN BATERIA NOKIA 3 (Ref: $ 19.990)</option>
+                                                            <option value="BATERIA-NOKIA-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA NOKIA 5 (Ref: $ 24.990)</option>
+                                                            <option value="BATERIA-NOKIA-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN BATERIA NOKIA 6 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN FLEX DE CARGA IPHONE 5 (Ref: $ 18.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN FLEX DE CARGA IPHONE 5S (Ref: $ 18.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN FLEX DE CARGA IPHONE 5c (Ref: $ 18.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN FLEX DE CARGA IPHONE 5SE (Ref: $ 22.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN FLEX DE CARGA IPHONE 6 (Ref: $ 22.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA IPHONE 6S (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA IPHONE 6 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA IPHONE 6s PLUS (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 32.990">REPARACIÓN FLEX DE CARGA IPHONE 7 (Ref: $ 32.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA IPHONE 7 PLUS (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN FLEX DE CARGA IPHONE 8 (Ref: $ 39.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN FLEX DE CARGA IPHONE 8 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN FLEX DE CARGA IPHONE X (Ref: $ 49.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE- XS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN FLEX DE CARGA IPHONE  XS (Ref: $ 54.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-XS MAX" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN FLEX DE CARGA IPHONE XS MAX (Ref: $ 59.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 64.990">REPARACIÓN FLEX DE CARGA IPHONE 11 (Ref: $ 64.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-XR" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA IPHONE XR (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-IPHONE-SE 2020" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN FLEX DE CARGA IPHONE SE 2020 (Ref: $ 39.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-GPLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI GPLAY (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-GPLAY MINI" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI GPLAY MINI (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 8 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y7 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI Y7 2018 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y7 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI Y7 2019 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y6 2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI Y6 2 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y6 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI Y6 2019 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y9 PRIME 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI Y9 PRIME 2019 (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-Y9 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI Y9 2019 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 9 LITE (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 9 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 10 (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 10 LITE (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-MATE 20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI MATE 20 LITE (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P10 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P10 LITE (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P9 LITE (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P9 LITE 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P9 LITE 2017 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P9 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-PSMART 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA HUAWEI PSMART 2018 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P SMART 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P SMART 2019 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI P20 (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI P20 LITE (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-NOVA 3i" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA HUAWEI NOVA 3i (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-NOVA 5T" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI NOVA 5T (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P30 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI P30 LITE (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-HUAWEI-P40 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA HUAWEI P40 LITE (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J5 PRIME" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J5 PRIME (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J5 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG J5 2016 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J6 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J6 2018 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J6 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J7 / J7 NEO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG J7 / J7 NEO (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J2 prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG J2 prime (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J7 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG J7 2016 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG J4 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J4 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J7 Prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J7 Prime (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J7 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J7 PRO (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-J8 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG J8 2018 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A01" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA SAMSUNG A01 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A02" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG A02 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG A10 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A21S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA SAMSUNG A21S (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A22" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 32.990">REPARACIÓN FLEX DE CARGA SAMSUNG A22 (Ref: $ 32.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A32" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A32 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A52" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 32.990">REPARACIÓN FLEX DE CARGA SAMSUNG A52 (Ref: $ 32.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A72" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 32.990">REPARACIÓN FLEX DE CARGA SAMSUNG A72 (Ref: $ 32.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A10S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA SAMSUNG A10S (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA SAMSUNG A11 (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A71" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN FLEX DE CARGA SAMSUNG A71 (Ref: $ 39.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A20 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A20S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A20S (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A30 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A31" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A31 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A30S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A30S (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A50 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A51" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A51 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-SAMSUNG-A70" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA SAMSUNG A70 (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO C (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G2 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G3 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO x" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO x (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO x2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO x2 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO E" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO E (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO E2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO E2 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO E4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO E4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO E4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO E4 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO E5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO E5 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G5 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G6 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G6 PLAY (Ref: $ 22.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G8 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G8 PLAY (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G8 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G8 POWER (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G8 POWER LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G8 POWER LITE (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G9 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G9 PLUS (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G9 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G9 POWER (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G9 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G9 PLAY (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G4 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G4 PLAY (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G5 S PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G5 S PLUS (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G5 S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G5 S (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G5 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO ONE FUSION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO ONE FUSION (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO X PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO X PLAY (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO Z PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO Z PLAY (Ref: $ 34.990)</option>
+                                                            <option value="FLEX DE CARGA-MOTOROLA-MOTO G4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA MOTOROLA MOTO G4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-LG-LG K8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA LG LG K8 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-LG-LG K10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.900">REPARACIÓN FLEX DE CARGA LG LG K10 (Ref: $ 19.900)</option>
+                                                            <option value="FLEX DE CARGA-LG-K10 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.900">REPARACIÓN FLEX DE CARGA LG K10 2017 (Ref: $ 19.900)</option>
+                                                            <option value="FLEX DE CARGA-LG-G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.900">REPARACIÓN FLEX DE CARGA LG G2 (Ref: $ 19.900)</option>
+                                                            <option value="FLEX DE CARGA-LG-G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.900">REPARACIÓN FLEX DE CARGA LG G3 (Ref: $ 19.900)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA NOKIA 3 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN FLEX DE CARGA NOKIA 5 (Ref: $ 22.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-5.1" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN FLEX DE CARGA NOKIA 5.1 (Ref: $ 19.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-44203" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA NOKIA 44203 (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-44202" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA NOKIA 44202 (Ref: $ 24.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-5.1 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN FLEX DE CARGA NOKIA 5.1 PLUS (Ref: $ 29.990)</option>
+                                                            <option value="FLEX DE CARGA-NOKIA-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN FLEX DE CARGA NOKIA 6 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN MICROFONO IPHONE 5 (Ref: $ 18.990)</option>
+                                                            <option value="MICROFONO-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN MICROFONO IPHONE 5S (Ref: $ 18.990)</option>
+                                                            <option value="MICROFONO-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN MICROFONO IPHONE 5c (Ref: $ 18.990)</option>
+                                                            <option value="MICROFONO-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN MICROFONO IPHONE 5SE (Ref: $ 22.990)</option>
+                                                            <option value="MICROFONO-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN MICROFONO IPHONE 6 (Ref: $ 22.990)</option>
+                                                            <option value="MICROFONO-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO IPHONE 6S (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO IPHONE 6 PLUS (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO IPHONE 6s PLUS (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 32.990">REPARACIÓN MICROFONO IPHONE 7 (Ref: $ 32.990)</option>
+                                                            <option value="MICROFONO-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO IPHONE 7 PLUS (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN MICROFONO IPHONE 8 (Ref: $ 39.990)</option>
+                                                            <option value="MICROFONO-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN MICROFONO IPHONE 8 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="MICROFONO-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN MICROFONO IPHONE X (Ref: $ 49.990)</option>
+                                                            <option value="MICROFONO-IPHONE- XS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 54.990">REPARACIÓN MICROFONO IPHONE  XS (Ref: $ 54.990)</option>
+                                                            <option value="MICROFONO-IPHONE-XS MAX" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN MICROFONO IPHONE XS MAX (Ref: $ 59.990)</option>
+                                                            <option value="MICROFONO-IPHONE-11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 64.990">REPARACIÓN MICROFONO IPHONE 11 (Ref: $ 64.990)</option>
+                                                            <option value="MICROFONO-IPHONE-SE 2020" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN MICROFONO IPHONE SE 2020 (Ref: $ 39.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-GPLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI GPLAY (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-GPLAY MINI" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI GPLAY MINI (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 8 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y7 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y7 2018 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y7 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y7 2019 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y6 2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y6 2 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y6 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y6 2019 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y9 PRIME 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y9 PRIME 2019 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-Y9 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI Y9 2019 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 9 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 9 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 10 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 10 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-MATE 20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI MATE 20 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P10 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P10 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P10 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P9 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P9 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P9 LITE 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P9 LITE 2017 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P9 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-PSMART 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI PSMART 2018 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P SMART 2019" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P SMART 2019 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P20 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P20 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P20 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-NOVA 3i" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO HUAWEI NOVA 3i (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-NOVA 5T" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN MICROFONO HUAWEI NOVA 5T (Ref: $ 29.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P30 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO HUAWEI P30 LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-HUAWEI-P40 LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN MICROFONO HUAWEI P40 LITE (Ref: $ 29.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J5 PRIME" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J5 PRIME (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J5 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J5 2016 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J6 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J6 2018 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J6 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J7 / J7 NEO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J7 / J7 NEO (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J2 prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J2 prime (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J7 2016" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J7 2016 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J4 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J7 Prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J7 Prime (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J7 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J7 PRO (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-J8 2018" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG J8 2018 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A03" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A03 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A13 " data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A13  (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A33 original con marco" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A33 original con marco (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A53" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A53 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A01" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A01 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A02" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A02 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A12" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A12 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A02S/A03S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A02S/A03S (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A10 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A21S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN MICROFONO SAMSUNG A21S (Ref: $ 29.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A22" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A22 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A32" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO SAMSUNG A32 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A52" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO SAMSUNG A52 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A72" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO SAMSUNG A72 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A10S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO SAMSUNG A10S (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A11" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN MICROFONO SAMSUNG A11 (Ref: $ 29.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A71" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN MICROFONO SAMSUNG A71 (Ref: $ 39.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A20 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A20S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A20S (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A30 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A31" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A31 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A30S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A30S (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A50 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A51" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A51 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-SAMSUNG-A70" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO SAMSUNG A70 (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO C (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G2 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO G3 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO x" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO x (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO x2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO x2 (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO E" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO E (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO E2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO E2 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO E4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO E4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO E4" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO E4 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO E5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO E5 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G5 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G6 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 22.990">REPARACIÓN MICROFONO MOTOROLA MOTO G6 PLAY (Ref: $ 22.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G8 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO G8 PLAY (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G8 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G8 POWER (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G8 POWER LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G8 POWER LITE (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G9 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN MICROFONO MOTOROLA MOTO G9 PLUS (Ref: $ 29.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G9 POWER" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G9 POWER (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G9 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO MOTOROLA MOTO G9 PLAY (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G4 PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G4 PLAY (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G5 S PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO G5 S PLUS (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G5 S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO G5 S (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G5 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G5 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO ONE FUSION" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO MOTOROLA MOTO ONE FUSION (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G20" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G20 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G30" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G30 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO X PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MICROFONO MOTOROLA MOTO X PLAY (Ref: $ 24.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO Z PLAY" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN MICROFONO MOTOROLA MOTO Z PLAY (Ref: $ 34.990)</option>
+                                                            <option value="MICROFONO-MOTOROLA-MOTO G4 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO MOTOROLA MOTO G4 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 8 " data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 8  (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI 9C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI 9C (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 8 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 8 PRO (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI 10C" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI 10C (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 9 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 10 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 11 PRO" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 11 PRO (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI NOTE 9S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI NOTE 9S (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI 9" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI 9 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-XIAOMI-REDMI 9A" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO XIAOMI REDMI 9A (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG K8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG K8 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG K10" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG K10 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-K10 2017" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG K10 2017 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG K50" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG K50 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG K50s" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG K50s (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG K40s" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG K40s (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-LG Q60" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG LG Q60 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-G2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG G2 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-LG-G3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO LG G3 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-NOKIA-3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO NOKIA 3 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-NOKIA-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO NOKIA 5 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-NOKIA-5.1" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO NOKIA 5.1 (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-NOKIA-5.1 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO NOKIA 5.1 PLUS (Ref: $ 19.990)</option>
+                                                            <option value="MICROFONO-NOKIA-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN MICROFONO NOKIA 6 (Ref: $ 19.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN CAMARA FRONTAL IPHONE 5 (Ref: $ 18.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN CAMARA FRONTAL IPHONE 5S (Ref: $ 18.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN CAMARA FRONTAL IPHONE 5c (Ref: $ 18.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN CAMARA FRONTAL IPHONE 5SE (Ref: $ 19.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">REPARACIÓN CAMARA FRONTAL IPHONE 6 (Ref: $ 14.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA FRONTAL IPHONE 6S (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA FRONTAL IPHONE 6 PLUS (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA FRONTAL IPHONE 6s PLUS (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN CAMARA FRONTAL IPHONE 7 (Ref: $ 24.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 26.990">REPARACIÓN CAMARA FRONTAL IPHONE 7 PLUS (Ref: $ 26.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN CAMARA FRONTAL IPHONE 8 (Ref: $ 34.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 39.990">REPARACIÓN CAMARA FRONTAL IPHONE 8 PLUS (Ref: $ 39.990)</option>
+                                                            <option value="CAMARA FRONTAL-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN CAMARA FRONTAL IPHONE X (Ref: $ 49.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-5" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN CAMARA TRASERA IPHONE 5 (Ref: $ 18.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-5S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 18.990">REPARACIÓN CAMARA TRASERA IPHONE 5S (Ref: $ 18.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-5c" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN CAMARA TRASERA IPHONE 5c (Ref: $ 19.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-5SE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN CAMARA TRASERA IPHONE 5SE (Ref: $ 19.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-6" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN CAMARA TRASERA IPHONE 6 (Ref: $ 19.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-6S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA TRASERA IPHONE 6S (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-6 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA TRASERA IPHONE 6 PLUS (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-6s PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 23.990">REPARACIÓN CAMARA TRASERA IPHONE 6s PLUS (Ref: $ 23.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-7" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN CAMARA TRASERA IPHONE 7 (Ref: $ 29.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-7 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 55.990">REPARACIÓN CAMARA TRASERA IPHONE 7 PLUS (Ref: $ 55.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-8" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN CAMARA TRASERA IPHONE 8 (Ref: $ 34.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-8 PLUS" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 65.990">REPARACIÓN CAMARA TRASERA IPHONE 8 PLUS (Ref: $ 65.990)</option>
+                                                            <option value="CAMARA TRASERA-IPHONE-X" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN CAMARA TRASERA IPHONE X (Ref: $ 69.990)</option>
+                                                            <option value="CAMARA TRASERA-SAMSUNG-J7 Prime" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">REPARACIÓN CAMARA TRASERA SAMSUNG J7 Prime (Ref: $ 14.990)</option>
+                                                            <option value="MICROSOLDADURA-1" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 9.990">REPARACIÓN Dificulta 1 (Ref: $ 9.990)</option>
+                                                            <option value="MICROSOLDADURA-2" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 19.990">REPARACIÓN Dificultad 2 (Ref: $ 19.990)</option>
+                                                            <option value="MICROSOLDADURA-3" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 29.990">REPARACIÓN Dificultad 3 (Ref: $ 29.990)</option>
+                                                            <option value="MANO-OBRA-CELULAR-FLEX-CARGA" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 34.990">REPARACIÓN Flex A52S (Ref: $ 34.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-G22" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 59.990">REPARACIÓN PANTALLA MOTOROLA G22 (Ref: $ 59.990)</option>
+                                                            <option value="PANTALLA-HUAWEI-Y7P" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA HUAWEI Y7P (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-G100" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA MOTOROLA G100 (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A14" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA SAMSUNG A14 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-MOTOROLA-G60" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 69.990">REPARACIÓN PANTALLA MOTOROLA G60 (Ref: $ 69.990)</option>
+                                                            <option value="PANTALLA-SAMSUNG-A14-5G" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 79.990">REPARACIÓN PANTALLA SAMSUNG A14 5G (Ref: $ 79.990)</option>
+                                                            <option value="PANTALLA-VIVO-Y02S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA VIVO Y02S (Ref: $ 49.990)</option>
+                                                            <option value="PANTALLA-VIVO-Y15S" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 49.990">REPARACIÓN PANTALLA VIVO Y15S (Ref: $ 49.990)</option>
+                                                            <option value="MANTENIMIENTO-NOTEBOOK" data-precio="$ 24.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 24.990">REPARACIÓN MANTENIMIENTO COMPLETO A NOTEBOOK  LIMPIEZA Y CAMBIO DE PASTA TERMICA  (Ref: $ 24.990)</option>
+                                                            <option value="CHASIS-P30-LITE" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 14.990">REPARACIÓN CHASIS COMPLETO P30 LITE (Ref: $ 14.990)</option>
+                                                            <option value="PANTALLA-IPHONE-13" data-precio="$ 9.990" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 199.990">REPARACIÓN PANTALLA IPHONE 13 (Ref: $ 199.990)</option>
+                                                            <option value="" data-precio="$ 0" data-bs-toggle="tooltip" data-bs-placement="top" title=" Ref: $ 100.000">REPARACIÓN PANTALLA DESCUENTO (Ref: $ 100.000)</option>
+                                                    </datalist>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="garantia" class="col-sm-3 col-form-label">Nro. Orden Previo (sólo para garantía)</label>
+            <div class="col-sm-8">
+                <input type="number" class="form-control" id="garantia" name="garantia" value="0" min="0" max="9999999" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            </div>
+            <div class="alert alert-warning" role="alert" id="diverrgarantia" style="display: none;">Es necesario el numero de orden de servicio técnico original</div>
+        </div>
+        <div class="row mb-2">
+            <label for="id_prod" class="col-sm-3 col-form-label">Rut cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="rut" name="rut" maxlength="15" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="cliente" class="col-sm-3 col-form-label">Nombre cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="cliente" name="cliente" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="telefono" class="col-sm-3 col-form-label">Teléfono cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="telefono" name="telefono" maxlength="15" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="id_prod" class="col-sm-3 col-form-label">Email cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="email" name="email" maxlength="40" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="marca" class="col-sm-3 col-form-label">Marca telefono cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="marca" name="marca" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="modelo" class="col-sm-3 col-form-label">Modelo telefono cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="modelo" name="modelo" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="serial" class="col-sm-3 col-form-label">Serial telefono cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="serial" name="serial" maxlength="20" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="colores" class="col-sm-3 col-form-label">Color telefono cliente</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="colores" id="colores" autocomplete="off">
+                    <option value="">Selecciona el color</option>
+                                                            <option value="2">Amarillo</option>
+                                                            <option value="4">Azul</option>
+                                                            <option value="1">Blanco</option>
+                                                            <option value="6">Gris</option>
+                                                            <option value="8">Negro</option>
+                                                            <option value="5">Rojo</option>
+                                                            <option value="7">Rosado</option>
+                                                            <option value="9">Turquesa</option>
+                                                            <option value="3">Verde</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="condiciones" class="col-sm-3 col-form-label">Condiciones telefono cliente</label>
+            <div class="col-sm-8">
+                <textarea id="condiciones" name="condiciones" class="form-control" rows="4" required="required" autocomplete="off"></textarea>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnSinChip" name="btnSinChip" autocomplete="off">
+                    <label class="form-check-label" for="btnSinChip">SIN CHIP</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnSinTarjetaSD" name="btnSinTarjetaSD" autocomplete="off">
+                    <label class="form-check-label" for="btnSinTarjetaSD">SIN TARJETA SD</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnTapaRota" name="btnTapaRota" autocomplete="off">
+                    <label class="form-check-label" for="btnTapaRota">TAPA ROTA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnDesgaste" name="btnDesgaste" autocomplete="off">
+                    <label class="form-check-label" for="btnDesgaste">DESGASTE EN BORDES</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnApagado" name="btnApagado" autocomplete="off">
+                    <label class="form-check-label" for="btnApagado">DISPOSITIVO APAGADO</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnPantallaRota" name="btnPantallaRota" autocomplete="off">
+                    <label class="form-check-label" for="btnPantallaRota">PANTALLA ROTA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnCristalRoto" name="btnCristalRoto" autocomplete="off">
+                    <label class="form-check-label" for="btnCristalRoto">CRISTAL CAMARA ROTA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnPegado" name="btnPegado" autocomplete="off">
+                    <label class="form-check-label" for="btnPegado">PEGADO EN LOGO</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnContactoAgua" name="btnContactoAgua" autocomplete="off">
+                    <label class="form-check-label" for="btnContactoAgua">CONTACTO CON AGUA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnSinCarcasa" name="btnSinCarcasa" autocomplete="off">
+                    <label class="form-check-label" for="btnSinCarcasa">SIN CARCASA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnCargador" name="btnCargador" autocomplete="off">
+                    <label class="form-check-label" for="btnCargador">CON CARGADOR</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="btnEquidoDoblado" name="btnEquidoDoblado" autocomplete="off">
+                    <label class="form-check-label" for="btnEquidoDoblado">EQUIPO DOBLADO</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <label for="estado" class="col-sm-3 col-form-label">Estado órden</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="estado" id="estado" required="required" autocomplete="off">
+                                                            <option value="1">Recibido</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="valor" class="col-sm-3 col-form-label">Valor a cobrar cliente</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="valor" name="valor" readonly="readonly" value="$9.990" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">.
+            <label for="id_usuario" class="col-sm-3 col-form-label">Código Vendedor</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="codigo_vendedor" name="codigo_vendedor" maxlength="100" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">.
+            <label for="id_usuario" class="col-sm-3 col-form-label">Nombre Vendedor</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="id_usuario" name="id_usuario" maxlength="50" required="required" autocomplete="off">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-sm-3 col-form-label">Forma de Pago</label>
+            <div class="col-sm-2">
+                <!-- aria-label="..." on the control -->
+                <button type="button" id="btnPayCard" class="btn btn-lg btn-warning" aria-label="cash-coin" data-bs-toggle="tooltip" data-bs-placement="left" title="Pago en Tarjeta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"></path>
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"></path>
+                    </svg>
+                    <br>
+                    Tarjeta
+                </button>
+            </div>
+            <div class="col-sm-2">
+                <!-- aria-label="..." on the control -->
+                <button type="button" id="btnPayCash" class="btn btn-lg btn-success" aria-label="cash-coin" data-bs-toggle="tooltip" data-bs-placement="left" title="Pago en Efectivo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"></path>
+                        <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"></path>
+                        <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"></path>
+                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"></path>
+                    </svg>
+                    <br>
+                    Efectivo
+                </button>
+            </div>
+            <div class="col-sm-4 visually-hidden" id="divtxtcash">
+                <div class="form-floating">
+                    <input class="form-control" name="cantidad_recibida_venta" required="" type="number" id="cantidad_recibida_venta" placeholder="Cantidad recibida por el cliente" value="0" min="0" max="9999999">
+                    <label class="" for="cantidad_recibida_venta">Cantidad dinero recibido</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" name="cantidad_vuelto" required="" type="number" id="cantidad_vuelto" placeholder="Vuelto para el cliente" value="0" min="0" max="9999999" readonly="readonly">
+                    <label class="" for="cantidad_vuelto">Vuelto para el cliente</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary disabled" id="guardar_datos" value="Actualizar" aria-disabled="true" disabled="true">Guardar datos</button>
+        </div>
+    </form>
+</body>
+</html>

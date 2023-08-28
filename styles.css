@@ -9,8 +9,4 @@ html{
 body{
     background:rgba(92, 92, 91, 0.13);
 }
-@media print {
-    .hidden-print {
-    display: none !important;
-    }
-    }
+

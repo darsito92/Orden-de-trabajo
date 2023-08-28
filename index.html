@@ -43,22 +43,31 @@
         </div>
     </nav>
     <!-- Butones modales -->
-    <div class="container text-center mt-3">
-        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
-            data-bs-target="#modalOrden">Orden Servicio Tecnico</button>
-        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
-            data-bs-target="#modalInforme">Informe Servicio Tecnico</button>
-        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
-            data-bs-target="#modalPrecios">Precios</button>
-        <button type="button" class="btn btn-success bg-success" data-bs-toggle="modal"
-            data-bs-target="#modalServicios">Servicios</button>
-    </div>
+    <section class="bg-light">
+        <div class="container-xl row mx-auto">
+            <div class="btn-group-vertical mx-3 my-3 d-flex gap-1 col-3">
+                <button type="button" class="btn bg-success text-white" data-bs-toggle="modal"
+                    data-bs-target="#modalOrden">Orden Servicio Tecnico</button>
+                <button type="button" class="btn bg-success text-white" data-bs-toggle="modal"
+                    data-bs-target="#modalInforme">Informe Servicio Tecnico</button>
+                <button type="button" class="btn bg-success text-white" data-bs-toggle="modal"
+                    data-bs-target="#modalPrecios">Precios</button>
+                <button type="button" class="btn bg-success text-white" data-bs-toggle="modal"
+                    data-bs-target="#modalServicios">Servicios</button>
+            </div>
+            <div class="col">
+                <h2 class="mt-3"><strong class="text-danger">importante!</strong> la orden nv-208 requiere cambio de pantalla cliente no contesta</h2>
+            </div>
+        </div>
+    </section>
+    
+    
 
 
     <!-- Modal orden -->
     <div class="modal fade" id="modalOrden" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="modalOrdenLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="modalOrdenLabel">Orden de trabajo</h1>
@@ -87,7 +96,7 @@
                                 <h4 class="text-center text-uppercase"><strong>Tienda:</strong> servicio tecnico</h4>
                             </div>
                             <!-- datos cliente-->
-
+                            
                             <div class="row g-2 justify-content-center">
                                 <h2 class="text-center mt-5 mb-4">Datos cliente</h2>
                                 <div class="col">
